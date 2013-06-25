@@ -6,3 +6,7 @@
 .reveal h6 {
   text-transform: none;
 }
+
+section.the-wall-goes-up h3 span {
+  font-size: 0.6em;
+}
