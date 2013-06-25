@@ -91,33 +91,45 @@ Web companies of all sizes face many of the same challenges: sites must be faste
 
 ## The Solution
 * The dream is that, all day, all we have to do is 'our jobs'
-* That our work moves from left to right, through our entire system, requirement to production, with very little exception
-* DevOps refers to the tools and the mindset aspire to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change. 
-* A great deal of this responsibility falls on us as Developers in that it is time we take responsibility for not only the development of our software, but also the operation of it
-* Peoples talk a lot about the 'Culture' of DevOps that is going to save us all, and that's great, but !!!
+* That our work moves from left to right, through our entire system, business–requirement to production, with very little exception
+* DevOps refers to the tools and the mindset that aspire to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change. 
+* Responsibility falls on Developers in that we now need to own both the development of our software, and also the operation of it.
+* Responsibility falls on Operations to provide us with the tools that we need to do this.
+** One button environment
+** One button deploy
+* Responsibility falls on everyone to start the dialog. To  begin to collaborate and to cooperate.
+[SLIDE] - Holding hands
+* And this collaboration and cooperation is the 'Culture' of DevOps that is going to save us all, and that's great, but !!!
 * [SLIDE] Culture
-* But culture is not going to get me past the butthole...
+* What's that you say? But culture is not going to get me past the butthole...
 * [SLIDE] Buthole
 * [SLIDE] Fuck Culture
 * Give me tools
 [SLIDE] - Tools
 * Tools I can use
 * [SLIDE] G'Tool, whoops... Computer 
-* Common tools, will help to heal our the rift between dev and ops
-* I'm gonna talk about some good tools to check out shortly, but a quick example of common tooling is that developers and operations, and really the whole organization, should be using the same version control system. If something happens in the middle of the night, and everyone knows where to look, and knows how to use the tools to say: do a version bump, then one less person gets woken up, one less person is grumpy the next morning, and everyone wins.
+* Common tools
+* Because common tools will not only be more efficient, but also help to heal the rift. To tear down the wall
+[SLIDE] TEAR DOWN THE WALL
+* I'm gonna talk about some good tools to check out shortly, but a quick example of common tooling is that developers and operations, and really the whole organization, should be using the same version control system. If something happens in the middle of the night, and everyone knows where to look, has access, and knows how to use the tools to say: do a version bump, then one less person gets woken up, one less person is grumpy the next morning, and everyone wins.
 * Not just refactoring legacy code anymore, we are refactoring legacy organizations and the way we work.
-* And as we refactor code, we succeed when it is easy to change the code without breaking anything. THis is important because our job is introducing change.
-* You need a system that is capable and comfortable living in keeps pushing into the danger zone; and has the habits that enable you to survive in the danger zone
+* And as we refactor code, we succeed when it is easy to change the code without breaking anything. This is important because our job, as a developer, if you had to sum it up, is introducing change.
+* We need systems that are capable and comfortable existing in a constant state of change.
+* This is so far from where a lot of organizations are today, that in the Why We Need DevOps Now talk, Gene Kim says:
+You need a culture that keeps pushing into the danger zone  
+And has the habits that enable you to survive in the danger zone
 
-
-### Development Environment
-* You have a relationship with your computer. Like it or not, there is an emotional reaction when you sit down. Might be fear, might be power, might be friend, might be servant, master, tool or task.
-
-* Just as a chef carries their own knives, we all have our dev machine setup the way we like it;  This is great until friday afternoon and you're ready to push some code, you merge in master, bundle install, and everything blows up. An hour later, if you're lucky, you realize it is because a gem was added that doesn't build with the light-weight GCC that you installed 'to save time'.
-* A lot of us have probably toyed with the idea of a setup script to provision our personal computers. maybe a shell script, or Chef, or Boxen, both of which I will talk about later. THis seems totally reasonable because I am going to want the same tooling on all my machines.
-* Now what if someone suggested that you and your best programming buddy share the same setup script? you both use the same editor; cool. you both use Dropbox; cool. OK, maybe; But you'll need your dot files. if you could customize onto of a common base, that might work.
-* Now what someone suggested sharing that setup with your entire company, and just giving your laptop over to IT, and they'll give it back to you ready to rock. Probably not. Unless...
-* Unless you could login to github, read the base setup script, fork it, add your personal customizations on top of it, and fire it off knowing that your gcc will be the same as everyone else's and that version bumps will be pushed out via your organization's base class.
+## Contrast
+* So from a developer's point of view, what does this look like?
+* A couples examples
+* We all have our development machines setup differently. The software we use and our configurations are the tools of our trade. And just like a chef and his knives, this is a very personal thing. We put a lot of time into getting everything just right. THis is important because it directly effects our state of mind, and our emotional state (!!!) when we sit down to work. This is great, but i'm sure we've all been ready to push some code on friday afternoon, we merge in master, bundle install, and everything blows up. An hour later, if you're lucky, you realize it is because someone added a gem that doesn't build with the light-weight GCC that we  installed 'to save time'. This is a trite example but the problem is clear: the discrepancies between one or more developers environments have needlessly cost us time and energy.
+* Does anyone here have a script that they use to set up their dev machine?
+* A lot of us have probably toyed with the idea of a setup script to provision our personal computers. maybe a shell script, or Chef, or Boxen, both of which I will talk about later, and even if we haven't done it, this seems totally reasonable because we will probably want the same tooling on all my machines.
+* Now what if someone suggested that you share a setup script with your team? Or possibly your entire organization?
+* Sounds crazy, right?
+* Unless…
+* Unless this script was well written, overridable, extendable, and in available in version control.
+* Then, we can login, read the base setup script, fork it, add our customizations on top of it, and fire it off knowing that your gcc will be the same as everyone else's and that version bumps and other common stuff will be pushed out via your organization's base class.
 * This is where we are trying to get to. All the benefits of the collective wisdom, with zero sacrifice of individuality
 
 ### Project Environment
@@ -126,8 +138,8 @@ my system-level tools are the same as everyone on my teams, install my gems, run
 * Turns out someone added Redis to this project. This is not a system level tool,
 this is a per-project dependency.
 * its also not too hard to debug, but that is not always the case.
-* Git pull; bundle is not enough anymore
-* But just like Server definitions, there can be project definittions that install the proper runtimes and data stores and fetch the latest code.
+* Git pull; bundle is not enough for any real–world project
+* But just like Server definitions, there can be project definittions that install the proper runtimes and data stores and fetch the latest code and do a better job of ensuring consistency across multi–developer teams
 * [SLIDE] : Boxen project recipe
 
 ### CI and CD

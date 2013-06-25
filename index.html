@@ -217,6 +217,28 @@
 
 
         <section>
+          <p>Boxen Project Manifest</p>
+          <pre>
+            <code class='ruby'>
+              class projects::trollin {
+                include icu4c
+                include phantomjs
+
+                boxen::project { 'trollin':
+                  dotenv        => true,
+                  elasticsearch => true,
+                  mysql         => true,
+                  nginx         => true,
+                  redis         => true,
+                  ruby          => '1.9.3',
+                  source        => 'boxen/trollin'
+                }
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
           <h3>Puppet Report</h3>
           <p>'DevOps' up 50% on Linkedin keyword searches</p>
         </section>

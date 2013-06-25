@@ -10,3 +10,7 @@
 section.the-wall-goes-up h3 span {
   font-size: 0.6em;
 }
+
+.reveal pre {
+  box-shadow: none;
+}
