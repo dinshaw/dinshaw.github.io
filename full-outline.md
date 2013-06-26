@@ -1,14 +1,14 @@
 * [SLIDE] The Wall Dev2DevOps
 
 # Hello and thanks for coming to Dev to DevOps.
-* My name is Dinshaw. That's one word; that's my first name.
+* My name is Dinshaw. 
 * I work at Constant Contact as a developer and I have nothing to do with operations.
 * The closest I have come to deployments is complaining when they don't go smoothly.
 * I rarely ever log into one of our CentOS boxes, which the application that I worked on for the last two years runs on.
-* This is a problem.
 * My job description does not say that I need to know my way around our production environment.
-* This is not uncommon, in our industry, and one of the  fall-outs from this separation of Dev and Ops is that a wall of mistrust and disrespect has gone up between the two.
-* Recently, over the last 5 or 6 years, our community is realizing that it is  time for a change.
+* This is a problem.
+* This is not uncommon.
+* But our industry is starting to realize that the separation between the roles of Development and Operations, the 'wall' that we as developers may or may not 'throw our code over', is not a great way to do business and that it is time for a change.
 
 ## Law of the Instrument
 * [SLIDE] Law of the Instrument
@@ -93,6 +93,7 @@ Web companies of all sizes face many of the same challenges: sites must be faste
 
 # The dream is that, all day, all we have to do is 'our jobs'
 * That our work moves from left to right, through our entire system, business–requirement to production, with very little exception.
+* At the end of every sprint we have working code AND the env it runs in
 * DevOps refers to the ways and means to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change into production.
 * New responsibility now falls on Developers in that we need to own both the development of our software, and also the operation of it.
 * Responsibility falls on Operations to provide us with the tools that we need to do this.
@@ -163,15 +164,7 @@ this is a per-project dependency.
 * Puppet report http://info.puppetlabs.com/2013-state-of-devops-report.html
 * [SLIDE] State of DevOps Report
 * LinkedIn keyword 'DevOps' up 50% from 2012 to 2013
-* DevOps is: - from Puppet Blog - https://puppetlabs.com/blog/what-is-a-devops-engineer/?utm_campaign=newsletter&utm_medium=email&utm_source=newsletter-201306&utm_content=0523earnshawdevopsengineer&mkt_tok=3RkMMJWWfF9wsRokvK%2FKZKXonjHpfsX64%2BkpUaO2lMI%2F0ER3fOvrPUfGjI4CTsdiI%2FqLAzICFpZo2FFID%2FCFeZRM%2B%2FdO
-** Coding Scripting
-** Process Reengineering (seeing how/where it could be better)
-** Communication and collaboration
-** Comfort with with frequent, incremental code testing and deployment
-** Strong grasp of automation tools
-** A strong focus on business outcomes
-** Comfort with collaboration, open communication and reaching across functional borders
-
+* What is a DevOps engieenier?
 ## Our Reluctance
 * Why aren't we doing all this already? Been around since 2007.
 * Why isn't everyone doing TDD and CI? It's been around for a while now. Everyone agrees its the right thing to do.
@@ -225,7 +218,6 @@ THis might be a simple as setting in your preferences, but that is automation an
 * Not doing TDD? You will NEVER get to CD.
 * Manual testing has no place in the deployment workflow. Zero (0) manual QE _in the deployment workflow_. Everything has to be automated.
 * Once we know our code is solid, we can begin to address the environment.
-* Working code AND the env it runs in
 * Two things we need from ops:
 ** Ops must provide a one button environment that you can be 100% confidant is a clone of your test production environment. This becomes possible when setup of these environments is scripted with something like Chef or Puppet, and under version control
 ** One button deploy: we have to know that deployments are happening the same way every time.
