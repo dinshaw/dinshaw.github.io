@@ -71,8 +71,8 @@ Web companies of all sizes face many of the same challenges: sites must be faste
 ## The Problem
 * As a professionals in the software industry, our job is to:
 ** Deliver value to our end users by innovation
-** We are supposed to be building the future of the way people organize their lives. 
-** But instead, we spend a great deal of time on unplanned work: 
+** We are supposed to be building the future of the way people organize their lives.
+** But instead, we spend a great deal of time on unplanned work:
 *** configuring the tools and environments
 *** And trouble shooting the hand-off to from Dev to Ops
 * And the better we get, the more complicated our tool chains and environments become, and fragility creeps into lives.
@@ -92,7 +92,7 @@ Web companies of all sizes face many of the same challenges: sites must be faste
 ## The Solution
 * The dream is that, all day, all we have to do is 'our jobs'
 * That our work moves from left to right, through our entire system, business–requirement to production, with very little exception
-* DevOps refers to the tools and the mindset that aspire to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change. 
+* DevOps refers to the tools and the mindset that aspire to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change.
 * Responsibility falls on Developers in that we now need to own both the development of our software, and also the operation of it.
 * Responsibility falls on Operations to provide us with the tools that we need to do this.
 ** One button environment
@@ -107,7 +107,7 @@ Web companies of all sizes face many of the same challenges: sites must be faste
 * Give me tools
 [SLIDE] - Tools
 * Tools I can use
-* [SLIDE] G'Tool, whoops... Computer 
+* [SLIDE] G'Tool, whoops... Computer
 * Common tools
 * Because common tools will not only be more efficient, but also help to heal the rift. To tear down the wall
 [SLIDE] TEAR DOWN THE WALL
@@ -116,7 +116,7 @@ Web companies of all sizes face many of the same challenges: sites must be faste
 * And as we refactor code, we succeed when it is easy to change the code without breaking anything. This is important because our job, as a developer, if you had to sum it up, is introducing change.
 * We need systems that are capable and comfortable existing in a constant state of change.
 * This is so far from where a lot of organizations are today, that in the Why We Need DevOps Now talk, Gene Kim says:
-You need a culture that keeps pushing into the danger zone  
+You need a culture that keeps pushing into the danger zone
 And has the habits that enable you to survive in the danger zone
 
 ## Contrast
@@ -145,7 +145,7 @@ this is a per-project dependency.
 ### CI and Production
 * I am guessing everyone in this room has experienced problems promoting code from a development environment to CI and Production, so i will skip the example here.
 * The take away here is that these issues that we all see and accept as 'part of our job' are avoidable.
-* If your development environment and your local test environment are identical to CI and Production, then the time we spend troubleshooting these issues is minimized, and, maybe more importantly, the frustration and the finger–pointing 'hey it worked on my machine, it must be your fault' is also minimized. 
+* If your development environment and your local test environment are identical to CI and Production, then the time we spend troubleshooting these issues is minimized, and, maybe more importantly, the frustration and the finger–pointing 'hey it worked on my machine, it must be your fault' is also minimized.
 
 ## And we become viable as Talent
 * In addition to staying happy, another advantage to starting down the DevOps path now, is…
@@ -170,9 +170,9 @@ this is a per-project dependency.
 * Well, the easy answer is:
 ** Lac k of time
 ** Too many other priorities
-* But it can also be pretty overwhelming think about being a beginner again. 
-* We are paid to be professionals, and in some cases, experts. To know what we are doing. And for the most part, we do. We also have a great deal of learning baked into our day-to-day. 
-* We learn new libraries to use in our code-bases all the time. 
+* But it can also be pretty overwhelming think about being a beginner again.
+* We are paid to be professionals, and in some cases, experts. To know what we are doing. And for the most part, we do. We also have a great deal of learning baked into our day-to-day.
+* We learn new libraries to use in our code-bases all the time.
 * But a new way of working is going to take a significant effort.
 * [SLIDE] Muddle
 * Muddle story…
@@ -189,64 +189,33 @@ THis might be a simple as setting in your preferences, but that is automation an
 ** Set up .dotfiles
 ** Setup a task to rm your logs before your machine runs out of space
 * These things might seem trivial, but when we start to automate away the little things that take our time, we start to expose the next level of opportunity for optimization of our workflow.
-* You will start to see opportunities to automate everything  
-** Dev machine set up
-** Dev virtual machine set up
+* You will start to see opportunities to automate everything
+** Automate the setup of your development environment, the way you like it. Don't worry about sharing it with anyone else.
+** Automate the setup of your production environment, as your development workstation.
+* [Slide] Puppet & Chef
+* [SLIDE] Puppet
+** Written in ruby
+** [SLIDE] Boxen - link to presentation
+* [SLIDE] Opscode Chef - link to presentation
+** Chef server
+** Chef tools
 * So when we have used automation to help ensure that our machines works the way we want them to, we can start thinking about stuff a little further up stream like, 'does our code work the way we want it to?'
 * The time has come to be ashamed, if we are not doing TDD
 * [SLIDE] If you tell the truth, you don't have to remember anything.
 * Every line of untested code that we write, is like a lie that we tell to our boss that we forever have to remember. This is no way to live and its no way to work
 * Dev & Test are no longer separable.
 * Not doing TDD? You will NEVER get to CD.
-* Zero (0) manual QE _in the deployment workflow_. Everything has to be automated.
+* Manual testing has no place in the deployment workflow. Zero (0) manual QE _in the deployment workflow_. Everything has to be automated.
 * Once we know our code is solid, we can begin to address the environment.
 * Working code AND the env it runs in
 * Two things we need from ops:
 ** Ops must provide a one button environment that you can be 100% confidant is a clone of your test production environment. This becomes possible when setup of these environments is scripted with something like Chef or Puppet, and under version control
-** One button deploy: we have to know that deployments are happening the same way every time. 
+** One button deploy: we have to know that deployments are happening the same way every time.
+When every deployment is done differently, every production environment is different and no mastery procedure or configuration will ever be achived.
+
 * Developers do the deployment
-* Developers own uptime for code; Operations own uptime for platforms and tooling
-* You build it; you run it.
-* Google SRE - Hand-off Readiness Review
-* break things before prod
-** Choas Monkey - ec2 outage - break things before production
-* Show the Scott Cook's:
-By installing a rampant innovation culture, they now do 165 experiments in the three months of the season.
-
-Our business result? Conversion rate of the website is up 50 percent. Employee result? Everyone loves it, because now their ideas can make it to market.
-* After introducing the problem they put up a slide called 'Tools' and the number one thing they site is 'Automated Infrastructure'
-* No Such THing as DevOps Team - http://continuousdelivery.com/2012/10/theres-no-such-thing-as-a-devops-team/
-Create reusable deployment procedures: When every deployment is done differently, every production environment can become different, like snowflakes. When this occurs, no mastery is ever built in the organization in procedures or configurations. As Luke Kanies said, “If your infrastructure is special, you’re doing it wrong.”
-!!! What gets measured gets managed: the transparency that comes with automation will show that there is nothing special going on...
-
-
-## Tools/Techniques/Ideaologies
-* Puppet - http://puppetlabs.com/misc/webinars/?aliId=8052887#learningpuppet - On demand webinars
-** Boxen
-* Chef
-* Pair-Programming
-* http://dev2ops.org/
-!!! more
-* Have coffee with an operations person
-* Take DONE off the Kanban board: Code-Completion is an anti-pattern. We build and run services; the best we can hope for is that we have fulfilled our most recent obligation
-* Amazon @ O'rily Velocity Conferance - June 16, 2011
-http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf
-11.6 seconds - Mean time between deployments (weekday) 1,079 - Max # of deployments in a single hour 10,000 - Mean # of hosts simultaneously receiving a deployment 30,000 - Max # of hosts simultaneously receiving a deployment
-
-## Where do i end up?
-* It is a lot to learn but the payoff is currently unlimited
-## Reward
-* Personal
-!!!
-* Business
-!!!
-* Global/World
-!!!
-* Want to do something well, do it more often
-* The longer you do devops, the better it gets
-
-## Pay-off
-* Twitter Murder
+* Developers own uptime for code
+* [SLIDE] You build it; you run it.
 * Google SRE - Hand-off Readiness Review
 ** Types/frequency alerts
 ** Maturity of monitoring
@@ -254,7 +223,25 @@ http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf
 ** Release process
 ** Defect counts and severity
 ** Production Hygiene
+* When we get here, we can start forseeing common production issues before they ever get to production. Break things before prod
+** Choas Monkey - ec2 outage - break things before production
+
+* Pair-Programming
+* Have coffee with an operations person
+* Take DONE off the Kanban board: Code-Completion is an anti-pattern. We build and run services; the best we can hope for is that we have fulfilled our most recent obligation
+
+## Pay-off
+* Twitter Murder
 * Chat Ops
+* Intuit: Show the Scott Cook's:
+By installing a rampant innovation culture, they now do 165 experiments in the three months of the season.
+
+Our business result? Conversion rate of the website is up 50 percent. Employee result? Everyone loves it, because now their ideas can make it to market.
+* After introducing the problem they put up a slide called 'Tools' and the number one thing they site is 'Automated Infrastructure'
+
+* Amazon @ O'rily Velocity Conferance - June 16, 2011
+http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf
+11.6 seconds - Mean time between deployments (weekday) 1,079 - Max # of deployments in a single hour 10,000 - Mean # of hosts simultaneously receiving a deployment 30,000 - Max # of hosts simultaneously receiving a deployment
 
 ## Conclusion
 * Restate !!!
@@ -265,6 +252,8 @@ http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf
 http://continuousdelivery.com/
 * Puppet report http://info.puppetlabs.com/2013-state-of-devops-report.html
 * Chatops slides/talk
+* http://dev2ops.org/
 
-
-“If you tell the truth, you don't have to remember anything.” 
+* No Such THing as DevOps Team - http://continuousdelivery.com/2012/10/theres-no-such-thing-as-a-devops-team/
+* Amazon @ O'rily Velocity Conferance - June 16, 2011
+http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf
