@@ -14,3 +14,11 @@ section.the-wall-goes-up h3 span {
 .reveal pre {
   box-shadow: none;
 }
+
+.reveal ul{
+  list-style: circle;
+}
+
+.reveal ul li {
+  padding: 0.2em;
+}

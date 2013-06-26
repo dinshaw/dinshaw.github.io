@@ -31,23 +31,24 @@
     <![endif]-->
   </head>
   <body>
+    <div class='screen-logo'>
+      <div style='position: absolute; left: 20px; bottom: 20px; opacity: 0.5;'>
+        <img src='img/constant-contact-logo.png' width='250'>
+      </div>
+    </div>
     <div class="reveal">
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section data-markdown>
-          <script type="text/template">
-            ## Dev to DevOps
-            ![The Wall](img/the-wall.jpg)
-          </script>
+        <section>
+          <h3>Dev to DevOps</h3>
+          <img src='img/the-wall.jpg'>
         </section>
 
-        <section data-markdown>
-          <script type="text/template">
-            ## Law of the Instrument
-            "If all you have is a hammer, everything looks like a nail."
-            ![Marching Hammers](img/hammers.gif)
-            Abraham Kaplan, 1918-1993 in 1964
-          </script>
+        <section>
+          <h2>Law of the Instrument</h2>
+          <p>"If all you have is a hammer, everything looks like a nail."</p>
+          <img src='img/hammer.gif'>
+          <p>Abraham Kaplan, 1918-1993 in 1964</p>
         </section>
 
         <section>
@@ -70,27 +71,36 @@
 
         <section>
           <img src="img/judge.jpg">
+          <p>Angry Monster?</p>
         </section>
 
-        <section>
-          <img src="img/computer.jpg">
+       <section>
+          <img src="img/hammers.gif">
+          <p>More than one tool...</p>
         </section>
 
         <section>
           <img src="img/right-tool.jpg">
+          <p>A tool for a big job...</p>
         </section>
 
         <section>
           <img src="img/tools.jpg">
+          <p>A tool for a complicated job...</p>
         </section>
 
         <section>
           <img src="img/bat-belt.jpg">
+          <p>A tool to make our job cool and fun...</p>
+        </section>
+
+        <section>
+          <img src="img/computer.jpg">
+          <h2>DevOps</h2>
         </section>
 
         <section>
           <img src="img/homer.jpg">
-          <h2>DevOps</h2>
         </section>
 
         <section>
@@ -208,15 +218,18 @@
         </section>
 
         <section>
-          <img src='img/old-pc.jpg'>
+          <img src='img/computer.jpg'>
+          <p>Common tools</p>
         </section>
 
         <section>
           <img src='img/tear-down-the-wall.jpg'>
+          <p>We start taking down the wall</p>
         </section>
 
         <section>
-          <img src='img/bat-belt.jpg'>
+          <img src='img/danger-zone.jpg'>
+          <p>Danger Zone!</p>
         </section>
 
         <section>
@@ -253,11 +266,11 @@
         <section>
           <h3>Puppet: What is a DevOps Engineer?</h3>
           <ul>
-            <li>Coding/Scripting</li>
-            <li>Process re-engineering</li>
-            <li>Strong grasp of automation tools</li>
-            <li>A focus on business outcomes</li>
-            <li>Communication &amp; Collaboration</li>
+            <li class='fragment'>Coding/Scripting</li>
+            <li class='fragment'>Process re-engineering</li>
+            <li class='fragment'>Strong grasp of automation tools</li>
+            <li class='fragment'>A focus on business outcomes</li>
+            <li class='fragment'>Communication &amp; Collaboration</li>
           </ul>
         </section>
 
@@ -275,11 +288,108 @@
         <section>
           <h3>First Steps:</h3>
           <ul>
-            <li class='fragment'>TDD</li>
-            <li class='fragment'>TDD</li>
+            <li class='fragment'>Automate something simple</li>
+            <li class='fragment'>Automate something not-so-simple</li>
           </ul>
         </section>
 
+        <section>
+          <h2>Puppet &amp; Chef</h2>
+          <p class='fragment'>Both free! For a while anyway...</p>
+        </section>
+
+        <section>
+          <h2>Puppet:</h2>
+          <ul>
+            <li>Configuration Management Tool</li>
+            <li>Maintained by Puppet Labs</li>
+            <li>Written in Ruby</li>
+            <li>Idempotent</li>
+            <li><a href='http://vimeo.com/61172067'>Managing an Army of Laptops with Puppet</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Boxen</h2>
+          <p><a href='http://boxen.github.com/'>http://boxen.github.com/</a></p>
+          <pre>
+            <code class='ruby'>
+              class people::jbarnette {
+                include emacs   # requires emacs module in Puppetfile
+                include sparrow # requires sparrow module in Puppetfile
+
+                $home     = "/Users/${::luser}"
+                $my       = "${home}/my"
+                $dotfiles = "${my}/dotfiles"
+
+                repository { $dotfiles:
+                source  => 'jbarnette/dotfiles',
+                require => File[$my]
+                }
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Chef</h2>
+          <p><a href='http://www.opscode.com/'>opscode.com</a></p>
+          <p>Server vs Solo</p>
+          <p>Tools for developing &amp; testing</p>
+          <p><a href='http://www.youtube.com/watch?v=ZC91gZv-Uao'>TDDing tmux</a></p>
+        </section>
+
+        <section>
+          <h2>T.D.D.</h2>
+        </section>
+
+        <section>
+          <h2>You build it; you run it.</h2>
+        </section>
+
+        <section>
+          <h2>Google SRE</h2>
+          <p class='fragment'>Hand-off Readiness Review</p>
+          <ul>
+            <li class='fragment'>Types/Frequency of defects</li>
+            <li class='fragment'>Maturity of monitoring</li>
+            <li class='fragment'>Release process</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Netflix: Chaos Monkey</h2>
+          <p>April 21st, 2011 Amazon Web Service outage</p>
+          <p>Netfilx maintained availability</p>
+        </section>
+
+        <section>
+          <h2>Still scared?</h2>
+          <p class='fragment'>You're not alone.</p>
+          <p class='fragment'>Pair up!</p>
+        </section>
+
+        <section>
+          <h2>Twitter Murder!</h2>
+          <p>40 minute to  12 seconds!</p>
+        </section>
+
+        <section>
+          <h2>ChatOps at Github</h2>
+          <p>Automating common operational tasks with Hu-Bot</p>
+          <img src='img/hu-bot.jpg'>
+        </section>
+
+        <section>
+          <h3>
+            <a href='http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf'>Amazon @ O'rily Velocity Conf. 2011</a>
+          </h3>
+          <ul>
+            <li class='fragment'>A deploy every 11.6 seconds</li>
+            <li class='fragment'>Max deployments per hour: 10,000</li>
+            <li class='fragment'>30,000 hosts simultaneously receiving a deployment</li>
+          </ul>
+        </section>
 
         <section class='links'>
           <ul>
@@ -300,6 +410,30 @@
 
             <li>
               <a href='http://info.puppetlabs.com/2013-state-of-devops-report.html'>State of DevOps 2013 - Puppet Report</a>
+            </li>
+
+            <li>
+              <a href="http://docs.puppetlabs.com/learning/">Learning Puppet</a>
+            </li>
+
+            <li>
+              <a href="http://docs.opscode.com/">Learning Chef</a>
+            </li>
+
+            <li>
+              <a href="http://vimeo.com/61172067">Boxen presentation: Managing an army of laptops</a>
+            </li>
+
+            <li>
+              <a href="http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf">Amazon: A deploy every 11 seconds slides</a>
+            </li>
+
+            <li>
+              <a href='http://continuousdelivery.com/2012/10/theres-no-such-thing-as-a-devops-team/'>No such thing as a DevOps team</a>
+            </li>
+
+            <li>
+              <a href='http://www.youtube.com/watch?v=-LxavzqLHj8'>ChatOps at GitHub</a>
             </li>
           </ul>
         </section>

@@ -6,8 +6,8 @@ I'm assuming there are probably some people here who are not new to devops,. But
 
 * My name is Dinshaw. That's one word; that's my first name. My last name's not really important until you find another person with my first name. What is important is that I work at Constant Contact as a developer and I have nothing to do with operations.
 The closest I have come to deployments is complaining when they don't go smoothly.
-The code I was working on is deployed on CentOS, and although I worked on this code for over two years, I may have logged into one of our CentOS boxes five or ten times total. Nowhere in my job description does it say I need to know my way around our production environment. And recently, our community is realizing that this is a problem and that the time for change is upon us. Back to that later
-...
+I have never logged into a CentOS box, which the application that I worked on for the last two years runs on. This is a problem. It's also not entirely true, I have logged into one of our CentOS boxes a long enough to tail a log, figure out there is nowhere to run 'rails c'	 in a jruby deploy, and then run out of space for my minimally provisioned user.
+My job description does not say that I need to know my way around our production environment. And recently, our community is realizing that this is a problem and that the time for change is upon us. Back to that later...
 
 ## Law of the Instrument
 * [SLIDE] Law of the Instrument
@@ -25,13 +25,14 @@ So then if all I have is a G'Tool, do all my problems look like a guitar? Guitar
 * So now if our problem looks like an army of multi-armed-vampire-butthole-beasts?
 * Our problem is scary!
 * [SLIDE] Computer
-* What's does our tool need to look like?
+* We are going to need more than one tool…
+* [Slide - Hammers]
 * We need the right tool for a:
-1. big job * [SLIDE] - tree and saw
+1. big job * [SLIDE] 
 2. Complicated job [SLIDE]
 3. Lot of moving parts [SLIDE]
 * [SLIDE] Computer
-* DevOps refers to these tools
+* DevOps refers to not so much a tool, as mindset that finds the best tool for the job so that we can !!!
 * [SLIDE]- Cause of and solution to all of life's problems
 
 ## History
@@ -94,8 +95,6 @@ Web companies of all sizes face many of the same challenges: sites must be faste
 * DevOps refers to the tools and the mindset that aspires to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change.
 * New responsibility now falls on Developers in that we need to own both the development of our software, and also the operation of it.
 * Responsibility falls on Operations to provide us with the tools that we need to do this.
-** One button environment
-** One button deploy
 * Responsibility falls on everyone to start a dialog. To  begin to collaborate and to cooperate.
 [SLIDE] - Holding hands
 * And this collaboration and cooperation is the 'Culture' of DevOps that, as you may have heard, is going to save us all.
@@ -118,7 +117,7 @@ Web companies of all sizes face many of the same challenges: sites must be faste
 * This is so far from where a lot of organizations are today, that in the Why We Need DevOps Now talk, Gene Kim says:
 You need a culture that keeps pushing into the danger zone
 And has the habits that enable you to survive in the danger zone.
-* Intuit: Show the Scott Cook's:
+* Intuit's Scott Cook at the Economist conference 2011 Talking about when TurboTax:
 By installing a rampant innovation culture, they now do 165 experiments in the three months of the season. Our business result? Conversion rate of the website is up 50 percent. Employee result? Everyone loves it, because now their ideas can make it to market.
 
 
@@ -131,7 +130,7 @@ By installing a rampant innovation culture, they now do 165 experiments in the t
 * Sounds crazy, right?
 * Unless…
 * Unless this script was well written, overridable, extendable, and in available in version control.
-* Then, we can login, read the base setup script, fork it, add our customizations on top of it, and fire it off knowing that your gcc will be the same as everyone else's and that version bumps and other common stuff will be pushed out via your organization's base class.
+* Then, we can login, read the base setup script, fork it, add our customizations on top of it, and fire it off knowing that your gcc will be the same as everyone else's and that version bumps and other common stuff will be pushed out via your organization's base class, but all your personal stuff will be just the way you like it.
 * This is where we are trying to get to. All the benefits of the collective wisdom, with zero sacrifice of individuality
 
 ### Project Environment
@@ -153,7 +152,7 @@ this is a per-project dependency.
 * In addition to being happier and more productive, DevOps skills will keep us viable.
 * We are all incredably fortunate to find ourselves in a seemingly recesion proof industry.
 * [SLIDE] Working is the new rich
-* This is where our industry is heading. Our job description is changing and it is up to us whether we answer the call or not.
+* DevOps is where our industry is heading. Our job description is changing and it is up to us whether we answer the call or not.
 * Puppet report http://info.puppetlabs.com/2013-state-of-devops-report.html
 * [SLIDE] State of DevOps Report
 * LinkedIn keyword 'DevOps' up 50% from 2012 to 2013
@@ -176,11 +175,10 @@ most part, we do. We also have a great deal of learning baked into our day-to-da
 * We learn new libraries to use in our code-bases all the time.
 * But a new set of tools and a new way of working is going to take a little more effort.
 * It can be pretty overwhelming think about being a beginner again.
-* [SLIDE] Muddle
+* [SLIDE] Overwhelmed
 * Muddle story…
-* THis is the right way to feel. It means that you are pushing the edges of your comfort zone and that you are learning. Dont be afraid to hit enter...
-* 10 Years of martial arts story
-* Point being that not starting a task because it seems too big to accomplish is a very easy trap to fall into, but also, once you see it for what it is, a very easy one to get out of. All you have to do is take the first step. Dont be afraid to hit enter...
+* This is the right way to feel. It means that you are pushing the edges of your comfort zone and that you are learning. Dont be afraid to hit enter...
+
 
 ## So what is the first step, and how do I make it fun?
 * One of the two similarities of the High performing organizations that Gene Kim speaks about is Automation; the other one being version control.
@@ -194,10 +192,18 @@ THis might be a simple as setting in your preferences, but that is automation an
 * You will start to see opportunities to automate everything
 ** Automate the setup of your development environment, the way you like it. Don't worry about sharing it with anyone else.
 ** Automate the setup of your production environment; and then do it as your development workstation.
-* [Slide] Puppet & Chef !!! some differences...
+* [Slide] Puppet & Chef 
 * [SLIDE] Puppet
+** Run by Puppet Labs
 ** Written in ruby
-** [SLIDE] Boxen - link to presentation
+** Define the state that you would like you machine to be in.
+** Idempotent - Run it over and over and you will always end up in the same state
+** [SLIDE] Boxen
+*** link to presentation on the last slide
+*** Github wanted to make sure that everyone could push code their first day
+*** Run it often
+*** Security patches pushed out via a pull request
+*** Works out of the box, but still some kinks
 * [SLIDE] Opscode Chef - link to presentation
 ** Chef server
 ** Chef solo
@@ -231,29 +237,15 @@ When every deployment is done differently, every production environment is diffe
 ** Choas Monkey - ec2 outage - break things before production
 
 * Pair-Programming
+* Maybe even from someone from the other side of the wall
 * Have coffee with an operations person
-* Take DONE off the Kanban board: Code-Completion is an anti-pattern. We build and run services; the best we can hope for is that we have fulfilled our most recent obligation
 
 ## Pay-off
 * Twitter Murder
+** had a Git-based deploy system where we’d just instruct our front-ends to download the latest code from our main git machine and serve that. Oonce we got past a few hundred servers, things got very slow
+** Customized Bittorent running inside their datacenter
 * Chat Ops
-
 * Amazon @ O'rily Velocity Conferance - June 16, 2011
 http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf
 11.6 seconds - Mean time between deployments (weekday) 1,079 - Max # of deployments in a single hour 10,000 - Mean # of hosts simultaneously receiving a deployment 30,000 - Max # of hosts simultaneously receiving a deployment
 
-## Conclusion
-* Restate !!!
-* DevSecOps?
-* Slides
-
-## Links
-http://continuousdelivery.com/
-* Puppet report http://info.puppetlabs.com/2013-state-of-devops-report.html
-* Chatops slides/talk
-* http://dev2ops.org/
-* Dotfiles
-
-* No Such THing as DevOps Team - http://continuousdelivery.com/2012/10/theres-no-such-thing-as-a-devops-team/
-* Amazon @ O'rily Velocity Conferance - June 16, 2011
-http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf
