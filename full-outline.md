@@ -142,21 +142,18 @@ this is a per-project dependency.
 * But just like Server definitions, there can be project definittions that install the proper runtimes and data stores and fetch the latest code and do a better job of ensuring consistency across multi–developer teams
 * [SLIDE] : Boxen project recipe
 
-### CI and CD
-* Everyone in this room is familiar with problems running code on CI and in Production, so i will skip enumeration of my many battles.
+### CI and Production
+* I am guessing everyone in this room has experienced problems promoting code from a development environment to CI and Production, so i will skip the example here.
 * The take away here is that these issues that we all see and accept as 'part of our job' are avoidable.
-* If your development or your local test env is a VM that is exactly what is running on CI and Prod, then the time we spend troubleshooting these issues largely goes away.
-
-!!!
-* We start to automate our lives
-* [SLIDE] - Gerbils holding hands
-* To take advantage of these tools, now, is to leap into the future of our industry.
-* Worlds which were separated by a wall, will be peacefully dismantled by common toolsets, and common goal, of DevOps
-* Shadow IT - everyone managing their own shit because it takes to long the 'right' way
+* If your development environment and your local test environment are identical to CI and Production, then the time we spend troubleshooting these issues is minimized, and, maybe more importantly, the frustration and the finger–pointing 'hey it worked on my machine, it must be your fault' is also minimized. 
 
 ## And we become viable as Talent
-* Puppet and OpsCode
+* In addition to staying happy, another advantage to starting down the DevOps path now, is…
+* [SLIDE] Working is the new rich
+* Staying employed.
+* This is where our industry is heading. Our job description is changing and it is up to us whether we answer the call or not.
 * Puppet report http://info.puppetlabs.com/2013-state-of-devops-report.html
+* [SLIDE] State of DevOps Report
 * LinkedIn keyword 'DevOps' up 50% from 2012 to 2013
 * DevOps is: - from Puppet Blog - https://puppetlabs.com/blog/what-is-a-devops-engineer/?utm_campaign=newsletter&utm_medium=email&utm_source=newsletter-201306&utm_content=0523earnshawdevopsengineer&mkt_tok=3RkMMJWWfF9wsRokvK%2FKZKXonjHpfsX64%2BkpUaO2lMI%2F0ER3fOvrPUfGjI4CTsdiI%2FqLAzICFpZo2FFID%2FCFeZRM%2B%2FdO
 ** Coding Scripting
@@ -170,30 +167,49 @@ this is a per-project dependency.
 ## Our Reluctance
 * Why aren't we doing all this already? Been around since 2007.
 * Why isn't everyone doing TDD and CI? It's been around for a while now. Everyone agrees its the right thing to do.
-* Well, our lack of time and other priorities is an easy answer, but also, its overwhelming. Its a little scary to have to be a beginner again. We learn all day, learning a new gem is easy. A new way of doing things takes a little more effort.
-* 10 Years of martial arts story
-* So we decide to start but we are supposed to be professionals and now we are muddling though like beginners again.
+* Well, the easy answer is:
+** Lac k of time
+** Too many other priorities
+* But it can also be pretty overwhelming think about being a beginner again. 
+* We are paid to be professionals, and in some cases, experts. To know what we are doing. And for the most part, we do. We also have a great deal of learning baked into our day-to-day. 
+* We learn new libraries to use in our code-bases all the time. 
+* But a new way of working is going to take a significant effort.
 * [SLIDE] Muddle
-* Muddle quote...
-* Alternative is to carry on down the wrong road. and we all know...
-* I'll tell you what should be even scarier: getting left behind
+* Muddle story…
+* THis is the right way to feel. It means that you are pushing the edges of your comfort zone and that you are learning.
+* 10 Years of martial arts story
+* Point being that not starting a task because it seems too big to accomplish is a very easy trap to fall into, but also, once you see it, a very easy one to get out of. All you have to do is take the first step.
 
-## How do I start?
-* So as a developer, how do I move to CD?
+## So what is the first step, and how do I make it fun?
+* One of the two similarities of the High performing organizations that Gene Kim speaks about is Automation; the other one being version control.
+* Automation is a great place for any developer to start
+* Take one small, familiar thing that you already know how to do, and automate it
+** Make sure your editor removes white space when you save
+THis might be a simple as setting in your preferences, but that is automation and if it works consistently, then it is valuable forward progress.
+** Set up .dotfiles
+** Setup a task to rm your logs before your machine runs out of space
+* These things might seem trivial, but when we start to automate away the little things that take our time, we start to expose the next level of opportunity for optimization of our workflow.
+* You will start to see opportunities to automate everything  
+** Dev machine set up
+** Dev virtual machine set up
+* So when we have used automation to help ensure that our machines works the way we want them to, we can start thinking about stuff a little further up stream like, 'does our code work the way we want it to?'
+* The time has come to be ashamed, if we are not doing TDD
+* [SLIDE] If you tell the truth, you don't have to remember anything.
+* Every line of untested code that we write, is like a lie that we tell to our boss that we forever have to remember. This is no way to live and its no way to work
 * Dev & Test are no longer separable.
 * Not doing TDD? You will NEVER get to CD.
 * Zero (0) manual QE _in the deployment workflow_. Everything has to be automated.
-* WOrking code AND the env it runs in
-* Ops must provide a one button environment
-* One button deploy; one button environments.
+* Once we know our code is solid, we can begin to address the environment.
+* Working code AND the env it runs in
+* Two things we need from ops:
+** Ops must provide a one button environment that you can be 100% confidant is a clone of your test production environment. This becomes possible when setup of these environments is scripted with something like Chef or Puppet, and under version control
+** One button deploy: we have to know that deployments are happening the same way every time. 
 * Developers do the deployment
 * Developers own uptime for code; Operations own uptime for platforms and tooling
 * You build it; you run it.
 * Google SRE - Hand-off Readiness Review
 * break things before prod
-* Run tests in 1000 servers - must be an automated set up. not hard if your env setup is a 1-click operation
-* Choas Monkey - ec2 outage - break things before production
-* 20% of all cycles should be allocated to technical debt
+** Choas Monkey - ec2 outage - break things before production
 * Show the Scott Cook's:
 By installing a rampant innovation culture, they now do 165 experiments in the three months of the season.
 
@@ -202,16 +218,8 @@ Our business result? Conversion rate of the website is up 50 percent. Employee r
 * No Such THing as DevOps Team - http://continuousdelivery.com/2012/10/theres-no-such-thing-as-a-devops-team/
 Create reusable deployment procedures: When every deployment is done differently, every production environment can become different, like snowflakes. When this occurs, no mastery is ever built in the organization in procedures or configurations. As Luke Kanies said, “If your infrastructure is special, you’re doing it wrong.”
 !!! What gets measured gets managed: the transparency that comes with automation will show that there is nothing special going on...
-* automate one small, familiar thing that already works
-** Remove whitespace from files in your editor
-** Set up .dotfiles
-** Empty the trash on your computer
-** Dev machine set up
-** Dev virtual machine set up
-* as we automate, we will go deeper, develop a more intimate relationship. cooperate with our machines. We automate the things we know, then we don't have to think about that again and we can move further.
 
-### Larger scale: project or company
-* Start with the most critical end-to-end flow
+
 ## Tools/Techniques/Ideaologies
 * Puppet - http://puppetlabs.com/misc/webinars/?aliId=8052887#learningpuppet - On demand webinars
 ** Boxen
