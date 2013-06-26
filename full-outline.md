@@ -1,7 +1,7 @@
 * [SLIDE] The Wall Dev2DevOps
 
-# Beginning
-* Hello and thanks for coming to Dev to DevOps. This talk is going to be a high-level introduction to DevOps, from a developers perspective,  and some suggestions of how to get started.
+# Hello and thanks for coming to Dev to DevOps.
+This talk is going to be a high-level introduction to DevOps, from a developers perspective,  and some suggestions of how to get started.
 I'm assuming there are probably some people here who are not new to devops,. But maybe, if you can put aside your experience, for a min, imagine that all your code is not being written TDD style; that all your teams are not using CI; that all your deploy are not one button deploys, and all your devs do not have access to VM of the production environment then there may still be some value and entertainment for you here.
 
 * My name is Dinshaw. That's one word; that's my first name. My last name's not really important until you find another person with my first name. What is important is that I work at Constant Contact as a developer and I have nothing to do with operations.
@@ -9,7 +9,7 @@ The closest I have come to deployments is complaining when they don't go smoothl
 The code I was working on is deployed on CentOS, and although I worked on this code for over two years, I may have logged into one of our CentOS boxes five or ten times total. Nowhere in my job description does it say I need to know my way around our production environment. And recently, our community is realizing that this is a problem and that the time for change is upon us. Back to that later
 ...
 
-## Intro
+## Law of the Instrument
 * [SLIDE] Law of the Instrument
 * Law of the Instrument Abraham Kaplan, American Philosopher 1918-1993 in 1964
 * [SLIDE] Hammer
@@ -71,56 +71,58 @@ Web companies of all sizes face many of the same challenges: sites must be faste
 ## The Problem
 * As a professionals in the software industry, our job is to:
 ** Deliver value to our end users by innovation
-** We are supposed to be building the future of the way people organize their lives.
-** But instead, we spend a great deal of time on unplanned work:
-*** configuring the tools and environments
-*** And trouble shooting the hand-off to from Dev to Ops
-* And the better we get, the more complicated our tool chains and environments become, and fragility creeps into lives.
+** We are supposed to be conceptualizing and building the future of the way people organize their lives.
+* But the reality is that we spend a great deal of time on:
+** Unplanned work
+** Configuring and fixing our tools and environments
+** And trouble shooting the hand-off to from Dev to Ops
+* And the better we get, the more complicated our tool chains and environments become, and fragility creeps into projects and lives.
 * Critical systems cannot be fragile
 * [SLIDE] Link to talk
-*  Why We Need DevOps Now: A Fourteen Year Study Of High Performing IT Organizations
-** http://www.youtube.com/watch?v=disjFj4ruHg
+* Why We Need DevOps Now: A Fourteen Year Study Of High Performing IT Organizations
 * I'm taking a lot of things from this presentation
 * High Performance Organizations
-** Using Version control and automation to ship [...] applications quickly without disrupting service
+** Using Version control and automation to ship [...] applications quickly without disrupting servicez
 ** deploy code 30 times more frequently than their peers
-** completing those deployments 8,000 times faster
+** completing those deployments 8,000 times faster (1 min deploy vs 1 week deploy)
 ** 50 percent fewer failures.
-** restoring service 12 times faster.
-* Puppet report http://info.puppetlabs.com/2013-state-of-devops-report.html
+** restoring service 12 times faster
+* Those are some pretty compelling numbers
 
-## The Solution
-* The dream is that, all day, all we have to do is 'our jobs'
-* That our work moves from left to right, through our entire system, business–requirement to production, with very little exception
-* DevOps refers to the tools and the mindset that aspire to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change.
-* Responsibility falls on Developers in that we now need to own both the development of our software, and also the operation of it.
+# The dream is that, all day, all we have to do is 'our jobs'
+* That our work moves from left to right, through our entire system, business–requirement to production, with very little exception.
+* DevOps refers to the tools and the mindset that aspires to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change.
+* New responsibility now falls on Developers in that we need to own both the development of our software, and also the operation of it.
 * Responsibility falls on Operations to provide us with the tools that we need to do this.
 ** One button environment
 ** One button deploy
-* Responsibility falls on everyone to start the dialog. To  begin to collaborate and to cooperate.
+* Responsibility falls on everyone to start a dialog. To  begin to collaborate and to cooperate.
 [SLIDE] - Holding hands
-* And this collaboration and cooperation is the 'Culture' of DevOps that is going to save us all, and that's great, but !!!
+* And this collaboration and cooperation is the 'Culture' of DevOps that, as you may have heard, is going to save us all.
 * [SLIDE] Culture
-* What's that you say? But culture is not going to get me past the butthole...
+* What's that you say? But culture is not going to help you with your current problem.
 * [SLIDE] Buthole
+* You are totally right
 * [SLIDE] Fuck Culture
 * Give me tools
 [SLIDE] - Tools
 * Tools I can use
 * [SLIDE] G'Tool, whoops... Computer
-* Common tools
-* Because common tools will not only be more efficient, but also help to heal the rift. To tear down the wall
+* And more specifically,, give me _Common_ tools
+* 'Common', because if we are all using the same tools we will get better at them quicker, but also because a common toolset fosters the colaberation and cooperation that will lead to the trust and respect. To tear down the wall
 [SLIDE] TEAR DOWN THE WALL
-* I'm gonna talk about some good tools to check out shortly, but a quick example of common tooling is that developers and operations, and really the whole organization, should be using the same version control system. If something happens in the middle of the night, and everyone knows where to look, has access, and knows how to use the tools to say: do a version bump, then one less person gets woken up, one less person is grumpy the next morning, and everyone wins.
+* I'm gonna talk about some specific tools to check out in a minute, but one example of common tooling is that developers and operations, and really the whole organization, should be using the same version control system. If something happens in the middle of the night, and everyone knows where to look, has access, and knows how to use the tools to say: do a version bump, then one less person gets woken up, one less person is grumpy the next morning, and everyone wins.
 * Not just refactoring legacy code anymore, we are refactoring legacy organizations and the way we work.
-* And as we refactor code, we succeed when it is easy to change the code without breaking anything. This is important because our job, as a developer, if you had to sum it up, is introducing change.
+* When we refactor code, we succeed when it is easy to change the code without breaking anything. This is important because our job, as a developer, if you had to sum it up, is introducing change.
 * We need systems that are capable and comfortable existing in a constant state of change.
 * This is so far from where a lot of organizations are today, that in the Why We Need DevOps Now talk, Gene Kim says:
 You need a culture that keeps pushing into the danger zone
-And has the habits that enable you to survive in the danger zone
+And has the habits that enable you to survive in the danger zone.
+* Intuit: Show the Scott Cook's:
+By installing a rampant innovation culture, they now do 165 experiments in the three months of the season. Our business result? Conversion rate of the website is up 50 percent. Employee result? Everyone loves it, because now their ideas can make it to market.
 
-## Contrast
-* So from a developer's point of view, what does this look like?
+
+## So from a developer's point of view, what does this look like?
 * A couples examples
 * We all have our development machines setup differently. The software we use and our configurations are the tools of our trade. And just like a chef and his knives, this is a very personal thing. We put a lot of time into getting everything just right. THis is important because it directly effects our state of mind, and our emotional state (!!!) when we sit down to work. This is great, but i'm sure we've all been ready to push some code on friday afternoon, we merge in master, bundle install, and everything blows up. An hour later, if you're lucky, you realize it is because someone added a gem that doesn't build with the light-weight GCC that we  installed 'to save time'. This is a trite example but the problem is clear: the discrepancies between one or more developers environments have needlessly cost us time and energy.
 * Does anyone here have a script that they use to set up their dev machine?
@@ -134,23 +136,23 @@ And has the habits that enable you to survive in the danger zone
 
 ### Project Environment
 * OK, so in the perfect world i just described i pull down my code knowing that
-my system-level tools are the same as everyone on my teams, install my gems, run my spec, and everything is still broken...
+my system-level tools are the same as everyone on my teams, install my dependancies, run my tests, and everything is still broken...
 * Turns out someone added Redis to this project. This is not a system level tool,
 this is a per-project dependency.
 * its also not too hard to debug, but that is not always the case.
-* Git pull; bundle is not enough for any real–world project
+* Git pull; bundle install; is not enough for any real–world project
 * But just like Server definitions, there can be project definittions that install the proper runtimes and data stores and fetch the latest code and do a better job of ensuring consistency across multi–developer teams
 * [SLIDE] : Boxen project recipe
 
 ### CI and Production
 * I am guessing everyone in this room has experienced problems promoting code from a development environment to CI and Production, so i will skip the example here.
-* The take away here is that these issues that we all see and accept as 'part of our job' are avoidable.
+* The take away here is that these issues that we all see and accept as 'part of our job' are avoidable to some extent.
 * If your development environment and your local test environment are identical to CI and Production, then the time we spend troubleshooting these issues is minimized, and, maybe more importantly, the frustration and the finger–pointing 'hey it worked on my machine, it must be your fault' is also minimized.
 
 ## And we become viable as Talent
-* In addition to staying happy, another advantage to starting down the DevOps path now, is…
+* In addition to being happier and more productive, DevOps skills will keep us viable.
+* We are all incredably fortunate to find ourselves in a seemingly recesion proof industry.
 * [SLIDE] Working is the new rich
-* Staying employed.
 * This is where our industry is heading. Our job description is changing and it is up to us whether we answer the call or not.
 * Puppet report http://info.puppetlabs.com/2013-state-of-devops-report.html
 * [SLIDE] State of DevOps Report
@@ -168,17 +170,17 @@ this is a per-project dependency.
 * Why aren't we doing all this already? Been around since 2007.
 * Why isn't everyone doing TDD and CI? It's been around for a while now. Everyone agrees its the right thing to do.
 * Well, the easy answer is:
-** Lac k of time
-** Too many other priorities
-* But it can also be pretty overwhelming think about being a beginner again.
-* We are paid to be professionals, and in some cases, experts. To know what we are doing. And for the most part, we do. We also have a great deal of learning baked into our day-to-day.
+** No time! Too many other priorities...
+* We are paid to be professionals, and in some cases, experts. To know what we are doing. And for the
+most part, we do. We also have a great deal of learning baked into our day-to-day.
 * We learn new libraries to use in our code-bases all the time.
-* But a new way of working is going to take a significant effort.
+* But a new set of tools and a new way of working is going to take a little more effort.
+* It can be pretty overwhelming think about being a beginner again.
 * [SLIDE] Muddle
 * Muddle story…
-* THis is the right way to feel. It means that you are pushing the edges of your comfort zone and that you are learning.
+* THis is the right way to feel. It means that you are pushing the edges of your comfort zone and that you are learning. Dont be afraid to hit enter...
 * 10 Years of martial arts story
-* Point being that not starting a task because it seems too big to accomplish is a very easy trap to fall into, but also, once you see it, a very easy one to get out of. All you have to do is take the first step.
+* Point being that not starting a task because it seems too big to accomplish is a very easy trap to fall into, but also, once you see it for what it is, a very easy one to get out of. All you have to do is take the first step. Dont be afraid to hit enter...
 
 ## So what is the first step, and how do I make it fun?
 * One of the two similarities of the High performing organizations that Gene Kim speaks about is Automation; the other one being version control.
@@ -187,20 +189,22 @@ this is a per-project dependency.
 ** Make sure your editor removes white space when you save
 THis might be a simple as setting in your preferences, but that is automation and if it works consistently, then it is valuable forward progress.
 ** Set up .dotfiles
-** Setup a task to rm your logs before your machine runs out of space
+** Setup a task to rotate your development logs before your machine runs out of space
 * These things might seem trivial, but when we start to automate away the little things that take our time, we start to expose the next level of opportunity for optimization of our workflow.
 * You will start to see opportunities to automate everything
 ** Automate the setup of your development environment, the way you like it. Don't worry about sharing it with anyone else.
-** Automate the setup of your production environment, as your development workstation.
-* [Slide] Puppet & Chef
+** Automate the setup of your production environment; and then do it as your development workstation.
+* [Slide] Puppet & Chef !!! some differences...
 * [SLIDE] Puppet
 ** Written in ruby
 ** [SLIDE] Boxen - link to presentation
 * [SLIDE] Opscode Chef - link to presentation
 ** Chef server
+** Chef solo
 ** Chef tools
 * So when we have used automation to help ensure that our machines works the way we want them to, we can start thinking about stuff a little further up stream like, 'does our code work the way we want it to?'
 * The time has come to be ashamed, if we are not doing TDD
+* I cannot even imagin working with untested code anymore. I would lose my hari and then my mind.
 * [SLIDE] If you tell the truth, you don't have to remember anything.
 * Every line of untested code that we write, is like a lie that we tell to our boss that we forever have to remember. This is no way to live and its no way to work
 * Dev & Test are no longer separable.
@@ -233,11 +237,6 @@ When every deployment is done differently, every production environment is diffe
 ## Pay-off
 * Twitter Murder
 * Chat Ops
-* Intuit: Show the Scott Cook's:
-By installing a rampant innovation culture, they now do 165 experiments in the three months of the season.
-
-Our business result? Conversion rate of the website is up 50 percent. Employee result? Everyone loves it, because now their ideas can make it to market.
-* After introducing the problem they put up a slide called 'Tools' and the number one thing they site is 'Automated Infrastructure'
 
 * Amazon @ O'rily Velocity Conferance - June 16, 2011
 http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf
@@ -253,6 +252,7 @@ http://continuousdelivery.com/
 * Puppet report http://info.puppetlabs.com/2013-state-of-devops-report.html
 * Chatops slides/talk
 * http://dev2ops.org/
+* Dotfiles
 
 * No Such THing as DevOps Team - http://continuousdelivery.com/2012/10/theres-no-such-thing-as-a-devops-team/
 * Amazon @ O'rily Velocity Conferance - June 16, 2011
