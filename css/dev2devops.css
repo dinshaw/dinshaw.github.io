@@ -22,3 +22,8 @@ section.the-wall-goes-up h3 span {
 .reveal ul li {
   padding: 0.2em;
 }
+
+.reveal section.links ul {
+  list-style: none;
+  font-size: 0.5em;
+}

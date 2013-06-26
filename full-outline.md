@@ -1,13 +1,14 @@
 * [SLIDE] The Wall Dev2DevOps
 
 # Hello and thanks for coming to Dev to DevOps.
-This talk is going to be a high-level introduction to DevOps, from a developers perspective,  and some suggestions of how to get started.
-I'm assuming there are probably some people here who are not new to devops,. But maybe, if you can put aside your experience, for a min, imagine that all your code is not being written TDD style; that all your teams are not using CI; that all your deploy are not one button deploys, and all your devs do not have access to VM of the production environment then there may still be some value and entertainment for you here.
-
-* My name is Dinshaw. That's one word; that's my first name. My last name's not really important until you find another person with my first name. What is important is that I work at Constant Contact as a developer and I have nothing to do with operations.
-The closest I have come to deployments is complaining when they don't go smoothly.
-I have never logged into a CentOS box, which the application that I worked on for the last two years runs on. This is a problem. It's also not entirely true, I have logged into one of our CentOS boxes a long enough to tail a log, figure out there is nowhere to run 'rails c'	 in a jruby deploy, and then run out of space for my minimally provisioned user.
-My job description does not say that I need to know my way around our production environment. And recently, our community is realizing that this is a problem and that the time for change is upon us. Back to that later...
+* My name is Dinshaw. That's one word; that's my first name.
+* I work at Constant Contact as a developer and I have nothing to do with operations.
+* The closest I have come to deployments is complaining when they don't go smoothly.
+* I rarely ever log into one of our CentOS boxes, which the application that I worked on for the last two years runs on.
+* This is a problem.
+* My job description does not say that I need to know my way around our production environment.
+* This is not uncommon, in our industry, and one of the  fall-outs from this separation of Dev and Ops is that a wall of mistrust and disrespect has gone up between the two.
+* Recently, over the last 5 or 6 years, our community is realizing that it is  time for a change.
 
 ## Law of the Instrument
 * [SLIDE] Law of the Instrument
@@ -28,7 +29,7 @@ So then if all I have is a G'Tool, do all my problems look like a guitar? Guitar
 * We are going to need more than one tool…
 * [Slide - Hammers]
 * We need the right tool for a:
-1. big job * [SLIDE] 
+1. big job * [SLIDE]
 2. Complicated job [SLIDE]
 3. Lot of moving parts [SLIDE]
 * [SLIDE] Computer
@@ -92,7 +93,7 @@ Web companies of all sizes face many of the same challenges: sites must be faste
 
 # The dream is that, all day, all we have to do is 'our jobs'
 * That our work moves from left to right, through our entire system, business–requirement to production, with very little exception.
-* DevOps refers to the tools and the mindset that aspires to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change.
+* DevOps refers to the ways and means to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change into production.
 * New responsibility now falls on Developers in that we need to own both the development of our software, and also the operation of it.
 * Responsibility falls on Operations to provide us with the tools that we need to do this.
 * Responsibility falls on everyone to start a dialog. To  begin to collaborate and to cooperate.
@@ -123,24 +124,30 @@ By installing a rampant innovation culture, they now do 165 experiments in the t
 
 ## So from a developer's point of view, what does this look like?
 * A couples examples
-* We all have our development machines setup differently. The software we use and our configurations are the tools of our trade. And just like a chef and his knives, this is a very personal thing. We put a lot of time into getting everything just right. THis is important because it directly effects our state of mind, and our emotional state (!!!) when we sit down to work. This is great, but i'm sure we've all been ready to push some code on friday afternoon, we merge in master, bundle install, and everything blows up. An hour later, if you're lucky, you realize it is because someone added a gem that doesn't build with the light-weight GCC that we  installed 'to save time'. This is a trite example but the problem is clear: the discrepancies between one or more developers environments have needlessly cost us time and energy.
+* We all have our development machines setup differently. The software we use and our configurations are the tools of our trade.
+* And just like a chef and his knives, this is a very personal thing. We put a lot of time into getting everything just right.
+* THis is important because it directly effects our state of mind, and our emotional state,  when we sit down to work.
+* It is great that we have this flexibility, but i'm sure we've all been ready to push some code on Friday afternoon, merge in master, bundle install, and everything blows up.
+* [Slide - FFF]
+An hour later, if you're lucky, you realize it is because someone added a gem that doesn't build with the light-weight GCC that we  installed 'to save time'.
+* This is a trite example but the problem is clear: the discrepancies between one or more developers environments have needlessly cost us time and energy.
 * Does anyone here have a script that they use to set up their dev machine?
 * A lot of us have probably toyed with the idea of a setup script to provision our personal computers. maybe a shell script, or Chef, or Boxen, both of which I will talk about later, and even if we haven't done it, this seems totally reasonable because we will probably want the same tooling on all my machines.
 * Now what if someone suggested that you share a setup script with your team? Or possibly your entire organization?
 * Sounds crazy, right?
 * Unless…
 * Unless this script was well written, overridable, extendable, and in available in version control.
-* Then, we can login, read the base setup script, fork it, add our customizations on top of it, and fire it off knowing that your gcc will be the same as everyone else's and that version bumps and other common stuff will be pushed out via your organization's base class, but all your personal stuff will be just the way you like it.
+* Then, we can login, read the base setup script, fork it, add our customizations on top of it, and fire it off knowing that your gcc will be the same as everyone else's and that version bumps and other common stuff will be pushed out by your organization, but all your personal stuff will be just the way you like it.
 * This is where we are trying to get to. All the benefits of the collective wisdom, with zero sacrifice of individuality
 
 ### Project Environment
 * OK, so in the perfect world i just described i pull down my code knowing that
-my system-level tools are the same as everyone on my teams, install my dependancies, run my tests, and everything is still broken...
+my system-level tools are the same as everyone on my teams, install my dependencies, run my tests, and everything is still broken...
 * Turns out someone added Redis to this project. This is not a system level tool,
 this is a per-project dependency.
 * its also not too hard to debug, but that is not always the case.
 * Git pull; bundle install; is not enough for any real–world project
-* But just like Server definitions, there can be project definittions that install the proper runtimes and data stores and fetch the latest code and do a better job of ensuring consistency across multi–developer teams
+* But just like Server definitions, there can be project definitions that install the proper runtimes and data stores and fetch the latest code and do a better job of ensuring consistency across multi–developer teams
 * [SLIDE] : Boxen project recipe
 
 ### CI and Production
@@ -192,22 +199,23 @@ THis might be a simple as setting in your preferences, but that is automation an
 * You will start to see opportunities to automate everything
 ** Automate the setup of your development environment, the way you like it. Don't worry about sharing it with anyone else.
 ** Automate the setup of your production environment; and then do it as your development workstation.
-* [Slide] Puppet & Chef 
+* [Slide] Puppet & Chef
 * [SLIDE] Puppet
 ** Run by Puppet Labs
 ** Written in ruby
-** Define the state that you would like you machine to be in.
-** Idempotent - Run it over and over and you will always end up in the same state
-** [SLIDE] Boxen
-*** link to presentation on the last slide
-*** Github wanted to make sure that everyone could push code their first day
-*** Run it often
-*** Security patches pushed out via a pull request
-*** Works out of the box, but still some kinks
 * [SLIDE] Opscode Chef - link to presentation
 ** Chef server
 ** Chef solo
 ** Chef tools
+* Define the state that you would like you machine to be in.
+* Idempotent - Run it over and over and you will always end up in the same state
+* Run it often
+* Security patches pushed out via a pull request
+
+** [SLIDE] Boxen
+*** Github wanted to make sure that everyone could push code their first day
+*** Works out of the box, but still some kinks
+
 * So when we have used automation to help ensure that our machines works the way we want them to, we can start thinking about stuff a little further up stream like, 'does our code work the way we want it to?'
 * The time has come to be ashamed, if we are not doing TDD
 * I cannot even imagin working with untested code anymore. I would lose my hari and then my mind.
@@ -221,7 +229,7 @@ THis might be a simple as setting in your preferences, but that is automation an
 * Two things we need from ops:
 ** Ops must provide a one button environment that you can be 100% confidant is a clone of your test production environment. This becomes possible when setup of these environments is scripted with something like Chef or Puppet, and under version control
 ** One button deploy: we have to know that deployments are happening the same way every time.
-When every deployment is done differently, every production environment is different and no mastery procedure or configuration will ever be achived.
+When every deployment is done differently, every production environment is different and no mastery of procedure or configuration will ever be achived.
 
 * Developers do the deployment
 * Developers own uptime for code
