@@ -3,16 +3,12 @@
 * My name is Dinshaw. 
 * I work at Constant Contact as a developer and I have very little to do with operations.
 * The closest I have come to deployments is complaining when they don't go smoothly.
-* Until very recently, the description of a developer rarely said that we need to know my way around our production environment.
-* This is a problem.
-* This is not uncommon.
+* Until very recently, the job description of a developer rarely said that we need to know my way around our production environment.
+* This is a problem. A common one
 * But our industry is starting to realize that the separation between the roles of Development and Operations, the 'wall' that we as developers may or may not 'throw our code over', is not a great way to do business and that it is time for a change.
 
 # [SLIDE] Law of the Instrument
 * Law of the Instrument Abraham Kaplan, American Philosopher 1918-1993 in 1964
-
-# [SLIDE] Hammer
-* If all you have is a hammer, everything looks like a nail
 * The manner in which we approach our problems is entirely dependent on the tools at our disposal.
 * No tool; jobs can be intimidating.
 * Perfect tool; jobs look fun.
@@ -106,13 +102,13 @@
 * A lot of people started contributing their experience and ideas
 * Grassroots movement sprang up against legacy tools and culture
 * From practitioners, for practitioners
-* People collaborating on common problems, finding the best solution
+
+# [] No such thing as a DevOps team
 * It is important to point out what DevOps was not, and should never be here.
 * NOT a spec, standard, or job-title
 
-# [] No such thing as a DevOps team
-
 # [] #devops
+* People collaborating on common problems, finding the best solution
 * Twitter still has lots of valuable
 
 # [] So what's the problem?
@@ -124,8 +120,7 @@
 1. Unplanned work
 2. Configuring and fixing our tools and environments
 3. And trouble shooting the hand-off to from Dev to Ops
-
-* And the better we get, the more complicated our tool chains and environments become, and fragility creeps into projects and lives.
+* And the better we get, the more complicated our tool chains and environments become, and fragility creeps into projects and lives. and that is something we have to avoid at all costs
 * Critical systems cannot be fragile
 
 # [] Why We Need DevOps Now
@@ -133,7 +128,8 @@
 * All companies, not just SAAS products, have a huge dependency on  IT 
 * Led him to the heart of the DevOps movement
 * I'm taking a lot of things from this presentation
-* High Performance Organizations
+
+# [] High Performance Organizations
 * Etsy, Netflix, Facebook, Amazon, Twitter and Google 
 * Using Version control and automation to ship [...] applications quickly without disrupting service
 * deploy code 30 times more frequently than their peers
@@ -160,24 +156,21 @@
 # [] Angry Monster
 * You are totally right
 
-# [] Fuck Culture
-* Give me tools
-
-# [] - Tools
-* Tools I can use
+# [] Forget Culture
+# [] Give me tools
+* Tools I can use, please...
 
 # [] G'Tool
 whoops... 
 
-# [] Computer
-* And more specifically, give me _Common_ tools
+# [] Computer - Common tools
 * 'Common', because if we are all using the same tools we will get better at them quicker, 
 * Because a common toolset fosters the collaboration and cooperation that will lead to the trust and respect we need to start tearing down the wall
 
 # [] TEAR DOWN THE WALL
-* I'm gonna talk about some specific tools to check out in a minute, but one example of common tooling is that developers and operations, and really the whole organization, should be using the same version control system. 
+* I'm gonna talk about some specific tools, but one example of common tooling is that developers and operations, and really the whole organization, should be using the same version control system. 
 * If something happens in the middle of the night, and everyone knows where to look, has access, and knows how to use the tools to say: do a version bump, then one less person gets woken up, one less person is grumpy the next morning, and everyone wins.
-* Not just refactoring legacy code anymore, we are refactoring legacy organizations and the way we work.
+* In the same way we refactor legacy code, we now need to refactor  our legacy organizations and the way we work.
 * When we refactor code, we succeed when it is easy to change the code without breaking anything. This is important because our job, as a developer, if you had to sum it up, is introducing change.
 * We need systems that are capable and comfortable existing in a constant state of change.
 * This is so far from where a lot of organizations are today, that in the Why We Need DevOps Now talk, Gene Kim says refers to this  as 
@@ -189,6 +182,7 @@ And has the habits that enable you to survive in the danger zone.
 # [] Scott Cook
 * Intuit's Scott Cook at the Economist conference 2011 Talking about when TurboTax:
 By installing a rampant innovation culture, they now do 165 experiments in the three months of the season. Our business result? Conversion rate of the website is up 50 percent. Employee result? Everyone loves it, because now their ideas can make it to market.
+* Compare to traditional retail site
 
 ## [] what does this look like?
 * A couples examples
