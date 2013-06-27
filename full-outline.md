@@ -61,39 +61,60 @@
 
 # [SLIDE]- Cause of and solution to all of life's problems
 
-## History
-* At the dawn of the computer age, there was no distinction between dev and ops. You mounted tapes, you flipped switches, and you wore a lab-coat.
-* [SLIDE] - Colosus
+# [] A Brief History of DevOps
+* At the dawn of the computer age, there was no distinction between dev and ops. 
+
+# [] Colosus
+* You mounted tapes, you flipped switches, and you wore a lab-coat.
+
+# [] Punch Cards
 * And then came the punch cards; that you handed over to an  'operator' who delivered a printout to a cubbyhole with your name on it.
-* [SLIDE] - Punch Card
+
+# [] Computer
 * And then finally, the arrival of the PC completely separated  operation from user and the modern 'IT Operations' culture was born, and the wall began to go up...
-* [SLIDE] The wall goes up
+
+# [] The wall goes up
+
+# [] Patric Dubois
 * 2007 Patric Dubois, Ghent, Belgium wanted to work in every possible area of IT
-* [SLIDE] Velocity conf link
-* 2009 Velocity Conf San Jose (http://velocityconf.com/velocity2009)
-Web companies of all sizes face many of the same challenges: sites must be faster, infrastructure must scale, and everything must be available to customers at all times, no matter what.
-** 10+ Deploys Per Day: Dev and Ops Cooperation at Flickr
-*** John Allspaw and Paul Hammond
-* [SLIDE] Talk link
+
+# [] Velocity Conf
+# [] 10+ Deploys Per Day: Dev and Ops Cooperation at Flickr
+* Two guys working at flicker
+* John Allspaw, Operations
+* Paul Hammond: Development
 * The community knew there were problems, but these guys really called it out and gave it a face, if not a name, and showed a path to salvation.
-* That there was, and still is, a common rift between developers and operations. THere was a lack of trust and a  lack of respect. And it was self-perpetuating, and only getting worse.
-* Developers job is to add new features; Operations job is to keep the site stable and fast
-* [SLIDE] Devs who think like Ops / Ops who think like Devs
-* This was the beginning of the DevOps movement, even though the name hadn't been given.
-* Dubois missed it!
-* Chatting on Twitter, people said you should start your own Velocity conf
+* They illustrated the problem with this now famous slide
+# [] StarTrek
+* That there was, and still is, a rift between developers and operations. THere was a lack of trust and a  lack of respect. And it was self-perpetuating.
+* Developers job is to add new features; Operations job is to keep the site stable and fast.
+
+# [] Devs who think like Ops / Ops who think like Devs
+* This was the beginning of the DevOps movement
+
+# [] Dubois missed it!
+* Complained about it on Twitter and 
+* people said you should start your own Velocity conf
 * Dubois organizes DevOpsDays 2009 in Belgium - Ghent
-* [SLIDE] DevOpsDays link
-** Talks like
-*** 'Introducing Kanban in operations'
-*** Continuous Integration, Pipelines and Deployment
-*** Building Agile Infrastructures with Puppet
+
+# [] DevOpsDays Logo
+
+# [] DevOpsDays
+* Talk titles
+
+# [] #devops
 * Twitter dropped the 'Days'
-* Grassroots movement against legacy tools and culture
+* A lot of people started contributing their experience and ideas
+* Grassroots movement sprang up against legacy tools and culture
 * From practitioners, for practitioners
-* NOT a 'thing/spec/product/standard/job-title'
-* a lot of people collaberating on common problems
-* #devops on twitter still has lots of valuable
+* People collaborating on common problems, finding the best solution
+* It is important to point out what DevOps was not, and should never be here.
+* NOT a spec, standard, or job-title
+
+# [] No such thing as a DevOps team
+
+* Twitter still has lots of valuable
+
 
 ## The Problem
 * As a professionals in the software industry, our job is to:

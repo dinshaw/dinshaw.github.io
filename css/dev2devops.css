@@ -27,3 +27,7 @@ section.the-wall-goes-up h3 span {
   list-style: none;
   font-size: 0.5em;
 }
+
+.reveal blockquote {
+  background: rgba(0,0,0,.05);
+}
