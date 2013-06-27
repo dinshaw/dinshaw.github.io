@@ -275,46 +275,44 @@ THis might be a simple as setting in your preferences, but that is automation an
 * Automate the setup of your production environment; and then do it as your development workstation.
 
 # [] Puppet & Chef
-
-* Define the state that you would like you machine to be in.
-
-# [] Puppet
-# [] Chef
-* Idempotent - Run it over and over and you will always end up in the same state
 * Run it often
 * Security patches pushed out via a pull request
 
-** [SLIDE] Boxen
-*** Github wanted to make sure that everyone could push code their first day
-*** Works out of the box, but still some kinks
+# [] Puppet
+# [] Boxen
+* Github wanted to make sure that everyone could push code their first day
+* Works out of the box, but still some kinks
 
-* So when we have used automation to help ensure that our machines works the way we want them to, we can start thinking about stuff a little further up stream like, 'does our code work the way we want it to?'
+# [] Chef
+
+# [] TDD
+* So once we have used automation to help ensure that our machines works the way we want them to, we can start thinking about stuff a little further up stream like, 'does our code work the way we want it to?'
 * The time has come to be ashamed, if we are not doing TDD
-* I cannot even imagin working with untested code anymore. I would lose my hari and then my mind.
-* [SLIDE] If you tell the truth, you don't have to remember anything.
-* Every line of untested code that we write, is like a lie that we tell to our boss that we forever have to remember. This is no way to live and its no way to work
+* I cannot even imagine working with untested code anymore. I would pull out my hair and then lose my mind.
+
+# [SLIDE] If you tell the truth...
+* Every line of untested code that we write, is like a lie that we tell to our boss that we forever have to remember. This is no way to live and its no way to work.
 * Dev & Test are no longer separable.
 * Not doing TDD? You will NEVER get to CD.
-* Manual testing has no place in the deployment workflow. Zero (0) manual QE _in the deployment workflow_. Everything has to be automated.
+* There is no room, no time, for a manual testing step in the deployment workflow. Everything has to be automated.
 * Once we know our code is solid, we can begin to address the environment.
-* Two things we need from ops:
-** Ops must provide a one button environment that you can be 100% confidant is a clone of your test production environment. This becomes possible when setup of these environments is scripted with something like Chef or Puppet, and under version control
-** One button deploy: we have to know that deployments are happening the same way every time.
-When every deployment is done differently, every production environment is different and no mastery of procedure or configuration will ever be achived.
 
+# [] What we need from ops
+* Ops must provide a one button environment that you can be 100% confidant is a clone of your test production environment. This becomes possible when setup of these environments is scripted with something like Chef or Puppet, and under version control
+* One button deploy: we have to know that deployments are happening the same way every time.
+When every deployment is done differently, every production environment is different and no mastery of procedure or configuration will ever be achieved.
+
+# [] You build it; you run it.
 * Developers do the deployment
 * Developers own uptime for code
-* [SLIDE] You build it; you run it.
-* Google SRE - Hand-off Readiness Review
-** Types/frequency alerts
-** Maturity of monitoring
-** System architecture review
-** Release process
-** Defect counts and severity
-** Production Hygiene
-* When we get here, we can start forseeing common production issues before they ever get to production. Break things before prod
-** Choas Monkey - ec2 outage - break things before production
 
+# [] Google SRE
+* When we get here, we can start foreseeing production issues before they ever happen. We can start to break things before production
+
+# [] Choas Monkey
+* ec2 outage
+
+# [] More suggestions?
 * Pair-Programming
 * Maybe even from someone from the other side of the wall
 * Have coffee with an operations person
