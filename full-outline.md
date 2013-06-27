@@ -1,10 +1,9 @@
 # [SLIDE] The Wall Dev2DevOps
 * Hello and thanks for coming to Dev to DevOps.
 * My name is Dinshaw. 
-* I work at Constant Contact as a developer and I have nothing to do with operations.
+* I work at Constant Contact as a developer and I have very little to do with operations.
 * The closest I have come to deployments is complaining when they don't go smoothly.
-* I rarely ever log into one of our CentOS boxes, which the application that I worked on for the last two years runs on.
-* My job description does not say that I need to know my way around our production environment.
+* Until very recently, the description of a developer rarely said that we need to know my way around our production environment.
 * This is a problem.
 * This is not uncommon.
 * But our industry is starting to realize that the separation between the roles of Development and Operations, the 'wall' that we as developers may or may not 'throw our code over', is not a great way to do business and that it is time for a change.
