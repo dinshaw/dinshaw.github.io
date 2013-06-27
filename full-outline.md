@@ -198,7 +198,7 @@ By installing a rampant innovation culture, they now do 165 experiments in the t
 * This is a trite example but the problem is clear: 
 * Discrepancies between one or more developers environments have needlessly cost us time and energy.
 * Does anyone here have a script that they use to set up their dev machine?
-* A lot of us have probably toyed with the idea of a setup script to provision our personal computers. maybe a shell script, or Chef, or Boxen, both of which I will talk about soon, and even if we haven't done it, it should seem like a reasonable idea because we will probably want the same tooling on all my machines. We can tweak it when we need to
+* A lot of us have probably toyed with the idea of a setup script to provision our personal computers. maybe a shell script, or Chef, or Boxen, an introduction to which is coming in a couple of slides, and even if we haven't done it, it should seem like a reasonable idea because we will probably want the same tooling on all my machines. We can tweak it when we need to
 * Now what if someone suggested that you share a setup script with your team? Or possibly your entire organization?
 * Sounds crazy, right?
 * Unless…
@@ -214,7 +214,7 @@ By installing a rampant innovation culture, they now do 165 experiments in the t
 * its also not a hard one to debug these days, but that is not always the case.
 * The point is that Git pull; bundle install; is not enough for any real–world project
 
-# [] : Boxen project recipe
+# [] Boxen project recipe
 * Just like Server definitions, there can be project definitions that install the proper runtimes and data stores and fetch the latest code
 * do a better job of ensuring consistency across multi–developer teams
 
