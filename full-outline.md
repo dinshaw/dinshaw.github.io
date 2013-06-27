@@ -1,6 +1,5 @@
-* [SLIDE] The Wall Dev2DevOps
-
-# Hello and thanks for coming to Dev to DevOps.
+# [SLIDE] The Wall Dev2DevOps
+* Hello and thanks for coming to Dev to DevOps.
 * My name is Dinshaw. 
 * I work at Constant Contact as a developer and I have nothing to do with operations.
 * The closest I have come to deployments is complaining when they don't go smoothly.
@@ -10,31 +9,57 @@
 * This is not uncommon.
 * But our industry is starting to realize that the separation between the roles of Development and Operations, the 'wall' that we as developers may or may not 'throw our code over', is not a great way to do business and that it is time for a change.
 
-## Law of the Instrument
-* [SLIDE] Law of the Instrument
+# [SLIDE] Law of the Instrument
 * Law of the Instrument Abraham Kaplan, American Philosopher 1918-1993 in 1964
-* [SLIDE] Hammer
-If all you have is a hammer, everything looks like a nail
-* [SLIDE] Nail
-* Nails aren't that bad. I know how to use them; they work; I can deal with this problem.
-* [SLIDE] G'Tool (Guitar-tool)
-Does anyone recognize this?
-It does everything you could ever want to do to your guitar.
-So then if all I have is a G'Tool, do all my problems look like a guitar? Guitars are fun! I like this problem...
-* [SLIDE] Flaming guitar
-* [SLIDE] Monster / butthole
-* So now if our problem looks like an army of multi-armed-vampire-butthole-beasts?
+
+# [SLIDE] Hammer
+* If all you have is a hammer, everything looks like a nail
+* The manner in which we approach our problems is entirely dependent on the tools at our disposal.
+* No tool; jobs can be intimidating.
+* Perfect tool; jobs look fun.
+
+# [SLIDE] Nail
+* Nails aren't that bad. 
+* I know how to use them
+* They work
+* I can deal with this problem.
+
+# [SLIDE] G'Tool (Guitar-tool)
+* Does anyone recognize this?
+* It does everything you could ever want to do to your guitar.
+* So then if all I have is a G'Tool, do all my problems look like a guitar?
+
+# [SLIDE] Flaming guitar
+* Guitars are fun! 
+* I like this problem...
+
+# [SLIDE] Angry Monster
+* But what if our problem looks like a flesh eating monster?
 * Our problem is scary!
-* [SLIDE] Computer
+
+# [SLIDE] Half-Monster, Half-Computer
+* Now?
+
+# [SLIDE] Monster Computer
+* Now?
+
+# [Slide] - Hammers
 * We are going to need more than one tool…
-* [Slide - Hammers]
-* We need the right tool for a:
-1. big job * [SLIDE]
-2. Complicated job [SLIDE]
-3. Lot of moving parts [SLIDE]
-* [SLIDE] Computer
-* DevOps refers to not so much a tool, as mindset that finds the best tool for the job so that we can !!!
-* [SLIDE]- Cause of and solution to all of life's problems
+
+# [SLIDE] Tree and saw
+* We need the right tool for a big job
+
+# [SLIDE] Tool tray
+* We need the right tool for a complicated job
+
+# [SLIDE] Tool tray
+* We need a tool that makes this job cool and fun
+
+# [SLIDE] Computer
+* Enter DevOps
+* DevOps is referring to a mindset that finds the best tool for the job so that we can accomplish all of the extremely complicated, interwoven tasks are our daily work, and have fun doing it.
+
+# [SLIDE]- Cause of and solution to all of life's problems
 
 ## History
 * At the dawn of the computer age, there was no distinction between dev and ops. You mounted tapes, you flipped switches, and you wore a lab-coat.
