@@ -26,6 +26,7 @@ section.the-wall-goes-up h3 span {
 .reveal section.links ul {
   list-style: none;
   font-size: 0.5em;
+  line-height: 1.5em;
 }
 
 .reveal blockquote {

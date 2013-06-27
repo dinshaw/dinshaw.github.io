@@ -317,12 +317,12 @@ When every deployment is done differently, every production environment is diffe
 * Maybe even from someone from the other side of the wall
 * Have coffee with an operations person
 
-## Pay-off
-* Twitter Murder
-** had a Git-based deploy system where we’d just instruct our front-ends to download the latest code from our main git machine and serve that. Oonce we got past a few hundred servers, things got very slow
-** Customized Bittorent running inside their datacenter
-* Chat Ops
-* Amazon @ O'rily Velocity Conferance - June 16, 2011
-http://assets.en.oreilly.com/1/event/60/Velocity%20Culture%20Presentation.pdf
-11.6 seconds - Mean time between deployments (weekday) 1,079 - Max # of deployments in a single hour 10,000 - Mean # of hosts simultaneously receiving a deployment 30,000 - Max # of hosts simultaneously receiving a deployment
 
+# [] Twitter Murder
+* had a Git-based deploy system where we’d just instruct our front-ends to download the latest code from our main git machine and serve that. Oonce we got past a few hundred servers, things got very slow
+* Customized Bittorent running inside their datacenter
+
+# [] Chat Ops
+# [] Amazon @ O'rily Velocity Conferance - June 16, 2011
+# [] Links
+# [] Closing
