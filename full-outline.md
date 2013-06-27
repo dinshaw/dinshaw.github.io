@@ -113,73 +113,99 @@
 
 # [] No such thing as a DevOps team
 
+# [] #devops
 * Twitter still has lots of valuable
 
-
-## The Problem
+# [] So what's the problem?
+* What is it about my life as a developer that is so bad?
 * As a professionals in the software industry, our job is to:
-** Deliver value to our end users by innovation
-** We are supposed to be conceptualizing and building the future of the way people organize their lives.
+* Deliver value to our end users by innovation
+* We are supposed to be conceptualizing and building the future of the way people organize their lives.
 * But the reality is that we spend a great deal of time on:
-** Unplanned work
-** Configuring and fixing our tools and environments
-** And trouble shooting the hand-off to from Dev to Ops
+1. Unplanned work
+2. Configuring and fixing our tools and environments
+3. And trouble shooting the hand-off to from Dev to Ops
+
 * And the better we get, the more complicated our tool chains and environments become, and fragility creeps into projects and lives.
 * Critical systems cannot be fragile
-* [SLIDE] Link to talk
-* Why We Need DevOps Now: A Fourteen Year Study Of High Performing IT Organizations
+
+# [] Why We Need DevOps Now
+* Benchmarked over 1,500 organizations for 14 years
+* All companies, not just SAAS products, have a huge dependency on  IT 
+* Led him to the heart of the DevOps movement
 * I'm taking a lot of things from this presentation
 * High Performance Organizations
-** Using Version control and automation to ship [...] applications quickly without disrupting servicez
-** deploy code 30 times more frequently than their peers
-** completing those deployments 8,000 times faster (1 min deploy vs 1 week deploy)
-** 50 percent fewer failures.
-** restoring service 12 times faster
+* Etsy, Netflix, Facebook, Amazon, Twitter and Google 
+* Using Version control and automation to ship [...] applications quickly without disrupting service
+* deploy code 30 times more frequently than their peers
+* completing those deployments 8,000 times faster (1 min deploy vs 1 week deploy)
+* 50 percent fewer failures.
+* restoring service 12 times faster
 * Those are some pretty compelling numbers
 
-# The dream is that, all day, all we have to do is 'our jobs'
+# [] The Dream
+* The dream is that, all day, all we have to do is 'our jobs'
 * That our work moves from left to right, through our entire system, business–requirement to production, with very little exception.
-* At the end of every sprint we have working code AND the env it runs in
 * DevOps refers to the ways and means to keep our systems efficient, and to enable us to keep applications available while constantly introducing significant amounts of change into production.
 * New responsibility now falls on Developers in that we need to own both the development of our software, and also the operation of it.
 * Responsibility falls on Operations to provide us with the tools that we need to do this.
-* Responsibility falls on everyone to start a dialog. To  begin to collaborate and to cooperate.
-[SLIDE] - Holding hands
+* Responsibility falls on everyone to start a dialog. To begin to collaborate and to cooperate.
+
+# [] Holding hands
+* Because, where we used to say at the end of every sprint we have working code AND the env it runs in
 * And this collaboration and cooperation is the 'Culture' of DevOps that, as you may have heard, is going to save us all.
-* [SLIDE] Culture
+
+# [] Culture
 * What's that you say? But culture is not going to help you with your current problem.
-* [SLIDE] Buthole
+
+# [] Angry Monster
 * You are totally right
-* [SLIDE] Fuck Culture
+
+# [] Fuck Culture
 * Give me tools
-[SLIDE] - Tools
+
+# [] - Tools
 * Tools I can use
-* [SLIDE] G'Tool, whoops... Computer
-* And more specifically,, give me _Common_ tools
-* 'Common', because if we are all using the same tools we will get better at them quicker, but also because a common toolset fosters the colaberation and cooperation that will lead to the trust and respect. To tear down the wall
-[SLIDE] TEAR DOWN THE WALL
-* I'm gonna talk about some specific tools to check out in a minute, but one example of common tooling is that developers and operations, and really the whole organization, should be using the same version control system. If something happens in the middle of the night, and everyone knows where to look, has access, and knows how to use the tools to say: do a version bump, then one less person gets woken up, one less person is grumpy the next morning, and everyone wins.
+
+# [] G'Tool
+whoops... 
+
+# [] Computer
+* And more specifically, give me _Common_ tools
+* 'Common', because if we are all using the same tools we will get better at them quicker, 
+* Because a common toolset fosters the collaboration and cooperation that will lead to the trust and respect we need to start tearing down the wall
+
+# [] TEAR DOWN THE WALL
+* I'm gonna talk about some specific tools to check out in a minute, but one example of common tooling is that developers and operations, and really the whole organization, should be using the same version control system. 
+* If something happens in the middle of the night, and everyone knows where to look, has access, and knows how to use the tools to say: do a version bump, then one less person gets woken up, one less person is grumpy the next morning, and everyone wins.
 * Not just refactoring legacy code anymore, we are refactoring legacy organizations and the way we work.
 * When we refactor code, we succeed when it is easy to change the code without breaking anything. This is important because our job, as a developer, if you had to sum it up, is introducing change.
 * We need systems that are capable and comfortable existing in a constant state of change.
-* This is so far from where a lot of organizations are today, that in the Why We Need DevOps Now talk, Gene Kim says:
+* This is so far from where a lot of organizations are today, that in the Why We Need DevOps Now talk, Gene Kim says refers to this  as 
+
+# [] The Danger Zore
 You need a culture that keeps pushing into the danger zone
 And has the habits that enable you to survive in the danger zone.
+
+# [] Scott Cook
 * Intuit's Scott Cook at the Economist conference 2011 Talking about when TurboTax:
 By installing a rampant innovation culture, they now do 165 experiments in the three months of the season. Our business result? Conversion rate of the website is up 50 percent. Employee result? Everyone loves it, because now their ideas can make it to market.
 
-
-## So from a developer's point of view, what does this look like?
+## [] what does this look like?
 * A couples examples
+* At the bottom of our daily stack, is our workstation
 * We all have our development machines setup differently. The software we use and our configurations are the tools of our trade.
-* And just like a chef and his knives, this is a very personal thing. We put a lot of time into getting everything just right.
-* THis is important because it directly effects our state of mind, and our emotional state,  when we sit down to work.
-* It is great that we have this flexibility, but i'm sure we've all been ready to push some code on Friday afternoon, merge in master, bundle install, and everything blows up.
-* [Slide - FFF]
-An hour later, if you're lucky, you realize it is because someone added a gem that doesn't build with the light-weight GCC that we  installed 'to save time'.
-* This is a trite example but the problem is clear: the discrepancies between one or more developers environments have needlessly cost us time and energy.
+* And in the same way that a chef has their knives, this is a very personal thing. We put a lot of time into getting everything just the way we want it.
+* This is important because it directly effects our state of mind, and our emotional state, when we sit down to work.
+* It is great that we have this flexibility, but it can also cause problems
+* We've all been ready to push code on Friday afternoon, we merge in master, bundle install, and ...
+
+# [] Fail.
+* An hour later, if you're lucky, you realize it is because someone added a gem that doesn't build with the light-weight GCC that we installed 'to save time'.
+* This is a trite example but the problem is clear: 
+* Discrepancies between one or more developers environments have needlessly cost us time and energy.
 * Does anyone here have a script that they use to set up their dev machine?
-* A lot of us have probably toyed with the idea of a setup script to provision our personal computers. maybe a shell script, or Chef, or Boxen, both of which I will talk about later, and even if we haven't done it, this seems totally reasonable because we will probably want the same tooling on all my machines.
+* A lot of us have probably toyed with the idea of a setup script to provision our personal computers. maybe a shell script, or Chef, or Boxen, both of which I will talk about soon, and even if we haven't done it, it should seem like a reasonable idea because we will probably want the same tooling on all my machines. We can tweak it when we need to
 * Now what if someone suggested that you share a setup script with your team? Or possibly your entire organization?
 * Sounds crazy, right?
 * Unless…
@@ -187,66 +213,73 @@ An hour later, if you're lucky, you realize it is because someone added a gem th
 * Then, we can login, read the base setup script, fork it, add our customizations on top of it, and fire it off knowing that your gcc will be the same as everyone else's and that version bumps and other common stuff will be pushed out by your organization, but all your personal stuff will be just the way you like it.
 * This is where we are trying to get to. All the benefits of the collective wisdom, with zero sacrifice of individuality
 
-### Project Environment
-* OK, so in the perfect world i just described i pull down my code knowing that
-my system-level tools are the same as everyone on my teams, install my dependencies, run my tests, and everything is still broken...
-* Turns out someone added Redis to this project. This is not a system level tool,
-this is a per-project dependency.
-* its also not too hard to debug, but that is not always the case.
-* Git pull; bundle install; is not enough for any real–world project
-* But just like Server definitions, there can be project definitions that install the proper runtimes and data stores and fetch the latest code and do a better job of ensuring consistency across multi–developer teams
-* [SLIDE] : Boxen project recipe
+# Project Environment
+* OK, so in the perfect world i just described i pull down my code knowing that my system-level tools are the same as everyone on my teams, install my dependencies, run my tests, and everything is still broken...
+
+# [] Complete fail.
+* Turns out someone added Redis to this project. This is not a system level tool, it's a per-project dependency.
+* its also not a hard one to debug these days, but that is not always the case.
+* The point is that Git pull; bundle install; is not enough for any real–world project
+
+# [] : Boxen project recipe
+* Just like Server definitions, there can be project definitions that install the proper runtimes and data stores and fetch the latest code
+* do a better job of ensuring consistency across multi–developer teams
 
 ### CI and Production
 * I am guessing everyone in this room has experienced problems promoting code from a development environment to CI and Production, so i will skip the example here.
 * The take away here is that these issues that we all see and accept as 'part of our job' are avoidable to some extent.
-* If your development environment and your local test environment are identical to CI and Production, then the time we spend troubleshooting these issues is minimized, and, maybe more importantly, the frustration and the finger–pointing 'hey it worked on my machine, it must be your fault' is also minimized.
+* If your development environment and your local test environment are identical to CI and Production, then the time we spend troubleshooting these issues is minimized, 
+* maybe more importantly, the frustration and the finger–pointing 'hey it worked on my machine, it must be your fault' is also minimized.
 
-## And we become viable as Talent
-* In addition to being happier and more productive, DevOps skills will keep us viable.
-* We are all incredably fortunate to find ourselves in a seemingly recesion proof industry.
-* [SLIDE] Working is the new rich
-* DevOps is where our industry is heading. Our job description is changing and it is up to us whether we answer the call or not.
-* Puppet report http://info.puppetlabs.com/2013-state-of-devops-report.html
-* [SLIDE] State of DevOps Report
+# [] Working is the new rich
+* In addition to professional and personal satisfaction
+* And we stay viable by starting down the path of DevOps
+* We are all incredibly fortunate to find ourselves in a seemingly recession proof niche of our industry.
+* DevOps is where our industry is heading. Our job description is changing and it is up to us to answer the call.
+
+# [] State of DevOps Report
 * LinkedIn keyword 'DevOps' up 50% from 2012 to 2013
-* What is a DevOps engieenier?
-## Our Reluctance
+
+# [] What is a DevOps engineer?
+* slides
+
+# [] What are we waiting for?
 * Why aren't we doing all this already? Been around since 2007.
-* Why isn't everyone doing TDD and CI? It's been around for a while now. Everyone agrees its the right thing to do.
+* Why isn't everyone doing TDD and CI? Everyone agrees its the right thing to do.
 * Well, the easy answer is:
-** No time! Too many other priorities...
-* We are paid to be professionals, and in some cases, experts. To know what we are doing. And for the
-most part, we do. We also have a great deal of learning baked into our day-to-day.
+* No time! Too many other priorities...
+* But there is another answer that is not as easy to say
+* We are paid to be professionals, and in some cases, experts. To know what we are doing. And for the most part, we do. 
+* We also have a great deal of learning baked into our day-to-day.
 * We learn new libraries to use in our code-bases all the time.
-* But a new set of tools and a new way of working is going to take a little more effort.
-* It can be pretty overwhelming think about being a beginner again.
-* [SLIDE] Overwhelmed
+* But learning a new set of tools and a new way of working is going to take a little more effort.
+* And even for the best of us, it can be a little overwhelming think about being a beginner again.
+
+# [] Overwhelmed
 * Muddle story…
 * This is the right way to feel. It means that you are pushing the edges of your comfort zone and that you are learning. Dont be afraid to hit enter...
 
-
-## So what is the first step, and how do I make it fun?
-* One of the two similarities of the High performing organizations that Gene Kim speaks about is Automation; the other one being version control.
+# [] First steps
+* One of the two similarities of the High performing organizations that Gene Kim cites is Automation; the other one being version control.
 * Automation is a great place for any developer to start
-* Take one small, familiar thing that you already know how to do, and automate it
-** Make sure your editor removes white space when you save
+* Pick one small, familiar thing that you already know how to do, and automate it
+* Make sure your editor removes white space when you save
 THis might be a simple as setting in your preferences, but that is automation and if it works consistently, then it is valuable forward progress.
-** Set up .dotfiles
-** Setup a task to rotate your development logs before your machine runs out of space
+* Set up .dotfiles
+* Setup a task to rotate your development logs before your machine runs out of space
+
 * These things might seem trivial, but when we start to automate away the little things that take our time, we start to expose the next level of opportunity for optimization of our workflow.
 * You will start to see opportunities to automate everything
-** Automate the setup of your development environment, the way you like it. Don't worry about sharing it with anyone else.
-** Automate the setup of your production environment; and then do it as your development workstation.
-* [Slide] Puppet & Chef
-* [SLIDE] Puppet
-** Run by Puppet Labs
-** Written in ruby
-* [SLIDE] Opscode Chef - link to presentation
-** Chef server
-** Chef solo
-** Chef tools
+
+* Automate the setup of your development environment, the way you like it. Don't worry about if it can be shared at first.
+* Automate the setup of your production environment; and then do it as your development workstation.
+
+# [] Puppet & Chef
+
 * Define the state that you would like you machine to be in.
+
+# [] Puppet
+# [] Chef
 * Idempotent - Run it over and over and you will always end up in the same state
 * Run it often
 * Security patches pushed out via a pull request
