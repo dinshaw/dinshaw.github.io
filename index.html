@@ -293,7 +293,29 @@
         </section>
 
         <section>
-          <img src='img/fff.jpg'>
+          <p>Puppet Manifest</p>
+          <pre>
+            <code class='ruby'>
+              def github(name, version, options = nil)
+                options ||= {}
+                options[:repo] ||= "boxen/puppet-#{name}"
+                mod name, version, :github_tarball => options[:repo]
+              end
+
+              github "gcc",        "1.0.0"
+              github "git",        "1.2.2"
+              github "homebrew",   "1.1.2"
+              github "nginx",      "1.4.0"
+              github "nodejs",     "2.2.0"
+              github "ruby",       "4.1.0"
+              github "stdlib",     "4.0.2", :repo => "puppetlabs/puppetlabs-stdlib"
+              github "sudo",       "1.0.0"
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <img src='img/redis.jpg'>
           <p>Complete fail.</p>
         </section>
 
@@ -381,7 +403,7 @@
           <h2>Puppet:</h2>
           <ul>
             <li><a href="https://puppetlabs.com/">Puppet Labs</a></li>
-            <li>Has it's own DSL but can be written in Ruby</li>
+            <li>Has it's own DSL but can be written in Ruby as of v2.6</li>
             <li><a href="http://forge.puppetlabs.com/">Puppet Forge</a></li>
             <li>Intro talk: <a href='http://vimeo.com/61172067'>Managing an Army of Laptops with Puppet</a></li>
           </ul>
@@ -545,7 +567,7 @@
           { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
           { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
           // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-          { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
 

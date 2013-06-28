@@ -214,7 +214,7 @@ By installing a rampant innovation culture, they now do 165 experiments in the t
 * its also not a hard one to debug these days, but that is not always the case.
 * The point is that Git pull; bundle install; is not enough for any real–world project
 
-# [] Boxen project recipe
+# [] ssBoxen project recipe
 * Just like Server definitions, there can be project definitions that install the proper runtimes and data stores and fetch the latest code
 * do a better job of ensuring consistency across multi–developer teams
 
